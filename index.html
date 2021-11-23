@@ -4,10 +4,28 @@
         <meta charset="utf-8"/>
         <script src="myscript.js" defer></script>
         <link rel="stylesheet" href="style.css"> 
-        <h1>Header</h1>
+        <h1>ETCH-A-SKETCH</h1>
     </head>
     <body>
         <div class="main">
+            <div class="rightSection">
+                <div>
+                    <label for="gridSize" class="rightSection"></label>
+                    <input type="range" id="inputGridSize" name="gridSize" min="6" max="64" onchange="createGrid()" >   
+                </div>
+                <div class='eraser'>
+                    <button class="eraser" onclick="eraseGrid()">Eraser</button>
+                </div>
+                <div class="default">
+                    <button class="default" onclick="setColorSchemeDefault()">Default</button>
+                </div>
+                <div class="rainbow">
+                    <button class="rainbow" onclick="setColorSchemeRainbow(12)">Rainbow</button>
+                </div>
+            </div>
+            <div class="gridSection"></div>
+            </div>  
         </div>
+        
     </body>
 </html>
